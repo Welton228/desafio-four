@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fcf9f9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu > li {
+    float: left;
+}
+
+.menu li a, .dropbtn {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 153, 0);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+}
+
+.submenu li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.submenu li a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 0;
+    background: linear-gradient(120deg, #975123 0%, #242527 100%);
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    transition: scale 350ms ease, opacity 350ms linear;
+}
+
+.gallery:has(img:hover) img:not(:hover) {
+    scale: .9;
+    opacity: .7;
+}
+
+
+
+
